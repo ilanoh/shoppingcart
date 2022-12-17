@@ -5,14 +5,14 @@ const ProductList = () => {
     // Define State of the Cart and the list of products available
     const [productList, setProductList] = useState([])
     const [cart, setCart] = useState([])
-    const prevCart = useRef(cart);
+    const prevCart = useRef(cart)
 
 
     // Fetch the list of products from the API
     useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
             .then(response => {
-                setProductList(response.data);
+                setProductList(response.data)
             })
     }, [])
 
