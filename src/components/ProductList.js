@@ -26,8 +26,6 @@ const ProductList = () => {
         }
     }, [])
 
-    //cart.map(product => document.getElementById(product.id).value = product.quantity)
-
     // Save the cart in localstorage everytime cart is modified
     useEffect(() => {
         if (prevCart.current !== cart) {
