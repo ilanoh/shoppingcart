@@ -78,11 +78,11 @@ const ProductList = () => {
     }
 
     // Calculate the price of the products in the cart
-    const price = cart.reduce((result, currentProduct) => result + currentProduct.price * currentProduct.quantity, 0)
+    const price = (cart.reduce((result, currentProduct) => result + currentProduct.price * currentProduct.quantity, 0)).toFixed(2)
 
     // Calculate the shipping value if shipping value is $20 for every multiple of 4 objects
     const shippingValue = 20 * (Math.trunc(cart.reduce((result, currentProduct) => result + currentProduct.quantity, 0) / 4) + 1)
-    
+
     return ( 
         <div className="shopping-cart">
             <div className="products">
